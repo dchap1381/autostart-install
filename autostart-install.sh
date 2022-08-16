@@ -22,6 +22,20 @@ EOF
 }
 
 
+#Script to remove previous tweaks to start vCard at boot
+
+if [ -e /home/pi/.config/autostart/vcard.desktop ];
+	then echo "vcard.desktop link found in /home/pi/.config/autostart! Removing.";
+	rm /home/pi/.config/autostart/vcard.desktop;
+	else echo "vcard.desktop link not found in /home/pi/.config/autostart"
+fi
+
+if [ -e /home/pi/runtest.sh ];
+	then echo "vcard.desktop link found in /home/pi/.config/autostart! Removing.";
+	rm /home/pi/runtest.sh;
+	else echo "vcard.desktop link not found in /home/pi/.config/autostart"
+fi
+
 #Script to install and enable vCard autostart
 
 if grep /home/pi/vcardstart.sh /etc/xdg/lxsession/LXDE-pi/autostart;
