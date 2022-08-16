@@ -27,7 +27,7 @@ EOF
 if grep /home/pi/vcardstart.sh /etc/xdg/lxsession/LXDE-pi/autostart;
 	then echo "Link to autostart script found.";
 	else echo "Link to autostart IS NOT FOUND! Adding link.";
-	if cat /home/pi/vcardstart.sh >> /etc/xdg/lxsession/LXDE-pi/autostart;
+	if echo /home/pi/vcardstart.sh >> /etc/xdg/lxsession/LXDE-pi/autostart;
 		then echo "Link to autostart has been created.";
 		else echo "Link to autostart WAS NOT CREATED!"
 	fi
