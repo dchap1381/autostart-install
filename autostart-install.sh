@@ -3,7 +3,7 @@
 #functions
 
 create_vcardstart()	{
-cat >> /home/pi/test << EOF
+cat >> /home/pi/vcardstart.sh << EOF
 #!/bin/bash
 
 #function to restart vCard POS
