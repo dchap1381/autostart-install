@@ -38,6 +38,10 @@ if [ -e /home/pi/vcardstart.sh ];
 	else echo "vcardstart.sh script NOT FOUND! Creating now.";
 	if create_vcardstart;
 		then echo "vcardstart.sh script created.";
+			 if chmod +x /home/pi/vcardstart.sh;
+			 	then echo "vcardstart.sh script now executable";
+			 	else echo "vcardstart.sh script NOT EXECUTABLE!"
+			 fi
 		else echo "vcardstart.sh scriipt NOT CREATED!"
 	fi
 fi
