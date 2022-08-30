@@ -60,3 +60,6 @@ if [ -e /home/pi/vcardstart.sh ];
 	fi
 fi
 
+read -n 1 -s -r -p "Press any key to reboot and test to make sure restart function works"
+
+reboot
